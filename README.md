@@ -5,9 +5,16 @@ Download UNSW-NB15 dataset from (UQ login required) [here](https://uq-my.sharepo
 
 Save data to directory ```UNSW/```.
 
+
 ## Requirements:
 [torch](https://pytorch.org/) 
 
 [numpy](https://numpy.org/)
 
 [pandas](https://pandas.pydata.org/) 
+
+
+## Reproducing Code
+```
+python train.py
+```
