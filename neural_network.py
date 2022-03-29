@@ -1,5 +1,4 @@
-# Weakly supervised binary classifiers
-# try to combine all types with a super class and sub classes
+# Weakly supervised binary classifier
 import numpy as np
 import torch
 import torch.nn as nn
