@@ -2,8 +2,6 @@ import pandas as pd
 import numpy as np
 from neural_network import PNClassifier, UUClassifier
 import matplotlib.pyplot as plt
-import os
-os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 #%% UNSW data
 X_train = np.array(pd.read_csv("UNSW/X_train.csv"))
@@ -32,14 +30,14 @@ def main():
     
     PN_accuracy = (TP+TN)/(TP+TN + FP+FN)
     PN_F = 2*TP/(2*TP+FP+FN)
-    print('PN accuracy', PN_accuracy)
-    print('PN F score', PN_F)
+    # print('PN accuracy', PN_accuracy)
+    # print('PN F score', PN_F)
     
-    plt.figure()
-    plt.plot(g.epoch_losses)
-    plt.xlabel('Epoch')
-    plt.ylabel('Training Loss')
-    plt.show()
+    # plt.figure()
+    # plt.plot(g.epoch_losses)
+    # plt.xlabel('Epoch')
+    # plt.ylabel('Training Loss')
+    # plt.show()
     
     #%% UU data setup
     n_p = (y_train == 1).sum()
@@ -87,14 +85,14 @@ def main():
     
     UU_accuracy = (TP+TN)/(TP+TN + FP+FN)
     UU_F = 2*TP/(2*TP+FP+FN)
-    print('UU accuracy', UU_accuracy)
-    print('UU F', UU_F)
+    # print('UU accuracy', UU_accuracy)
+    # print('UU F', UU_F)
     
-    plt.figure()
-    plt.plot(g.epoch_losses)
-    plt.xlabel('Epoch')
-    plt.ylabel('Training Loss')
-    plt.show()
+    # plt.figure()
+    # plt.plot(g.epoch_losses)
+    # plt.xlabel('Epoch')
+    # plt.ylabel('Training Loss')
+    # plt.show()
     
     return PN_accuracy, PN_F, UU_accuracy, UU_F
 
@@ -109,7 +107,7 @@ if __name__ == '__main__':
     for i in range(replications):
         accuracies_PN[i], fs_PN[i], accuracies_UU[i], fs_UU[i] = main()
     
-    print('PN accuracy mean (sd): ' + str(round(accuracies_PN.mean(), 4)) + ' (' + str(round(fs_PN.std(), 4)) + ')')
+    print('\nPN accuracy mean (sd): ' + str(round(accuracies_PN.mean(), 4)) + ' (' + str(round(fs_PN.std(), 4)) + ')')
     print('PN F mean (sd): ' + str(round(fs_PN.mean(), 4)) + ' (' + str(round(fs_PN.std(), 4)) + ')')
     
     print('\nUU accuracy mean (sd): ' + str(round(accuracies_UU.mean(), 4)) + ' (' + str(round(fs_UU.std(), 4)) + ')')
