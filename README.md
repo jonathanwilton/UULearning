@@ -18,3 +18,5 @@ Save data to directory ```UNSW/```.
 ```
 python train.py
 ```
+<!-- ## Using as an sklearn Classifier 
+-->
