@@ -7,11 +7,7 @@ Save data to directory ```UNSW/```.
 
 
 ## Requirements:
-[torch](https://pytorch.org/) 
-
-[numpy](https://numpy.org/)
-
-[pandas](https://pandas.pydata.org/) 
+```train.py```, ```neural_network.py```, [torch](https://pytorch.org/), [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/).
 
 
 ## Reproducing Code
