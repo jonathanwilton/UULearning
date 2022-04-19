@@ -14,7 +14,7 @@ Save data to directory ```UNSW/```.
 ```
 python train.py
 ```
-## Using as an sklearn Classifier 
+## Using as an sklearn-style classifier 
 This code can also be used like an sklearn-style classifier to train a neural network classifier using either a fully labelled dataset or two unlabelled datasets. An example usage for supervised classification:
 ```
 import pandas as pd
