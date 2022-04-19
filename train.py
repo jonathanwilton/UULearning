@@ -45,7 +45,6 @@ def main():
     theta1 = 0.8
     theta2 = 0.2
     
-    # n_1, n_2 = min((y_train == 1).sum(), (y_train == -1).sum()), min((y_train == 1).sum(), (y_train == -1).sum())
     n_1 = int(min(n_p/theta1, n_n/(1-theta1)))
     n_2 = int(min(n_p/theta2, n_n/(1-theta2)))
     
