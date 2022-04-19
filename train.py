@@ -30,8 +30,6 @@ def main():
     
     PN_accuracy = (TP+TN)/(TP+TN + FP+FN)
     PN_F = 2*TP/(2*TP+FP+FN)
-    # print('PN accuracy', PN_accuracy)
-    # print('PN F score', PN_F)
     
     # plt.figure()
     # plt.plot(g.epoch_losses)
@@ -43,6 +41,7 @@ def main():
     n_p = (y_train == 1).sum()
     n_n = (y_train == -1).sum()
     
+    # choose proportions of positive data in each unlabelled dataset
     theta1 = 0.8
     theta2 = 0.2
     
@@ -61,13 +60,9 @@ def main():
     n_to_1_ind = np.random.choice(np.where(y_train == -1)[0], size = int(prop_n_to_1*n_n), replace = False)
     n_to_2_ind = np.random.choice(np.where(y_train == -1)[0], size = int(prop_n_to_2*n_n), replace = False)
     
-    
     U1 = X_train[np.concatenate((p_to_1_ind, n_to_1_ind))]
     U2 = X_train[np.concatenate((p_to_2_ind, n_to_2_ind))]
-    
-    # print('est theta1', len(p_to_1_ind)/(len(p_to_1_ind) + len(n_to_1_ind)))
-    # print('est theta2', len(p_to_2_ind)/(len(p_to_2_ind) + len(n_to_2_ind)))
-    
+        
     #%%
     g = UUClassifier(hidden_layer_sizes = (300, 300, 300, 300), 
                      pi = pi,
@@ -85,8 +80,6 @@ def main():
     
     UU_accuracy = (TP+TN)/(TP+TN + FP+FN)
     UU_F = 2*TP/(2*TP+FP+FN)
-    # print('UU accuracy', UU_accuracy)
-    # print('UU F', UU_F)
     
     # plt.figure()
     # plt.plot(g.epoch_losses)
