@@ -6,7 +6,7 @@ Download UNSW-NB15 dataset from [here](https://uq-my.sharepoint.com/:f:/g/person
 Save data to directory ```UNSW/```.
 
 
-## Requirements:
+## Requirements
 ```train.py```, ```neural_network.py```, [torch](https://pytorch.org/), [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/).
 
 
