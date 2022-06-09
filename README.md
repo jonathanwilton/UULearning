@@ -1,5 +1,5 @@
 # UULearning
-Code accompanying the UQ AIML x MSS [talk](https://fb.me/e/1n866e5x8): Supervised Learning without Supervision for Cyber-Attack Detection.
+Code accompanying the UQ AIML x MSS [talk](https://fb.me/e/1n866e5x8): Supervised Learning without Supervision for Cyber-Attack Detection. Slides available [here](https://drive.google.com/file/d/1lcjUrY7ffvOiPPWvfckMs4Ba0-5pZNwv/view?usp=sharing).
 
 Download UNSW-NB15 dataset from [here](https://uq-my.sharepoint.com/:f:/g/personal/uqjwilt1_uq_edu_au/Et3QOlgWvtdGs72GZysbSfwBc7ImwQfoVzi_hYNQsBk8eg?e=hObv9N) (UQ login required).
 
